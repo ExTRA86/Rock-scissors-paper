@@ -63,6 +63,7 @@ function App() {
 
   useEffect(() => {
     !hideChoice && chooseWinner();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerChoice]);
 
   return (
