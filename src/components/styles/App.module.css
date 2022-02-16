@@ -1,137 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main {
-    background: radial-gradient(skyblue, #4e758a);
-    height: 100vh;
-    width: 100vw;
+  background: radial-gradient(skyblue, #4e758a);
+  height: 100vh;
+  width: 100vw;
 }
 
 .App {
-    text-align: center;
-    font-family: "Barlow Semi Condensed", sans-serif;
-    color: rgb(239, 239, 239);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: rgb(239, 239, 239);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .myBtn {
-    padding: 5px 10px;
-    color: #4e758a;
-    font-size: 14px;
-    /* background: transparent; */
-    border: 1px solid skyblue;
-    border-radius: 7px;
-    cursor: pointer;
-    text-decoration-line: none;
+  padding: 5px 10px;
+  color: #4e758a;
+  font-size: 14px;
+  border: 1px solid skyblue;
+  border-radius: 7px;
+  cursor: pointer;
+  text-decoration-line: none;
 }
 
 .myModal {
-    position: fixed;
-    top: 0%;
-    bottom: 0%;
-    right: 0%;
-    left: 0%;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .myModalContent {
-    padding: 15px;
-    background: white;
-    border-radius: 16px;
-    min-width: 250px;
+  padding: 15px;
+  background: white;
+  border-radius: 16px;
+  min-width: 250px;
 }
 
 .myModal.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px;
 }
 
 .game__start {
-    display: grid;
-    grid-template-areas:
-    "p a"
-    "r r";
-    grid-column-gap: 80px;
-    grid-row-gap: 10px;
-
+  display: grid;
+  grid-template-areas:
+    'p a'
+    'r r';
+  grid-column-gap: 80px;
+  grid-row-gap: 10px;
 }
 
 .game__player {
-    grid-area: p;
+  grid-area: p;
 }
 
 .game__ai {
-    grid-area: a;
+  grid-area: a;
 }
 
 .game__result {
-    grid-area: r;
+  grid-area: r;
 }
 
 .game img {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.game__player img {
+  cursor: auto;
+}
+
+.game__ai img {
+  transform: scale(-1, 1);
+  cursor: auto;
 }
 
 .RulesImg {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
 }
 
 .header {
-    border: 3px solid;
-    border-radius: 0.4rem;
-    display: grid;
-    grid-template-areas:
-  "t t"
-  "p a";
-    justify-content: space-between;
-    /*max-width: 700px;*/
-    width: 80%;
-    margin-top: 10px;
-    box-sizing: border-box;
+  border: 3px solid;
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-areas:
+    't t'
+    'p a';
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
 .score__t {
-    font-size: 2em;
-    font-weight: bold;
-    grid-area: t;
-    color: black;
-
+  font-size: 2em;
+  font-weight: bold;
+  grid-area: t;
+  color: black;
 }
 
 .score__player {
-    text-align: center;
-    font-size: 1.5em;
-    color: black;
-    grid-area: p;
-    padding: 10px;
-    margin-left: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+  grid-area: p;
+  padding: 10px;
+  margin-left: 30px;
 }
 
 .score__ai {
-    text-align: center;
-    font-size: 1.5em;
-    color: black;
-    grid-area: a;
-    padding: 10px;
-    margin-right: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+  grid-area: a;
+  padding: 10px;
+  margin-right: 30px;
 }
 
 .footer {
-    width: 80%;
-    display: flex;
-    flex-direction: row-reverse;
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 500px) {
+  .game__start {
+    grid-column-gap: 15px;
+  }
+
+  .score__t {
+    font-size: 1.6em;
+  }
+
+  .score__player {
+    font-size: 1.2em;
+  }
+
+  .score__ai {
+    font-size: 1.2em;
+  }
+
+  .App h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 438px) {
+  .main {
+    height: 100%;
+  }
 }
