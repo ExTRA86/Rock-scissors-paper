@@ -59,7 +59,7 @@
 .game {
   display: flex;
   justify-content: space-between;
-  margin: 40px 0px;
+  margin: 60px 0px;
 }
 
 .game__start {
@@ -81,6 +81,10 @@
 
 .game__result {
   grid-area: r;
+}
+
+.game__result h1 {
+  padding: 20px;
 }
 
 .game img {
@@ -172,14 +176,11 @@
 @media (max-width: 425px) {
   .game__start {
     grid-column-gap: 10px;
+    grid-row-gap: 0px;
   }
 
   .App {
     padding: 5px;
-  }
-
-  .game {
-    margin: 10px 0px;
   }
 }
 
