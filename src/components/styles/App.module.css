@@ -169,8 +169,8 @@
   }
 }
 
-@media (max-width: 438px) {
+@media (max-width: 435px) and (min-height: 825px) {
   .main {
-    height: 100%;
+    height: auto;
   }
 }
