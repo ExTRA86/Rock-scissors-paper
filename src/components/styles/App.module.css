@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-/*   padding: 20px; */
+  padding: 10px;
 }
 
 .myBtn {
@@ -59,7 +59,7 @@
 .game {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0px;
+  margin: 40px 0px;
 }
 
 .game__start {
@@ -168,9 +168,3 @@
     font-size: 1.5em;
   }
 }
-
-/* @media (max-width: 435px) and (max-height: 920px) {
-  .main {
-    height: auto;
-  }
-} */
