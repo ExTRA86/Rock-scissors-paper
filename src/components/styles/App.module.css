@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px;
 }
 
 .myBtn {
@@ -59,7 +59,7 @@
 .game {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0px;
+  margin: 40px 0px;
 }
 
 .game__start {
@@ -166,5 +166,30 @@
 
   .App h1 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 425px) {
+  .game__start {
+    grid-column-gap: 10px;
+  }
+
+  .App {
+    padding: 5px;
+  }
+
+  .game {
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .App h1 {
+    font-size: 1.2em;
+  }
+
+  .game img {
+    height: 150px;
+    width: 150px;
   }
 }
